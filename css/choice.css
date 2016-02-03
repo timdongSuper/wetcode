@@ -1,0 +1,116 @@
+html,body,#wrap{
+	width: 100%;
+	height: 100%;
+}
+/*copy*/
+body:before {
+    content: ' ';
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(../img/main/bg.jpg) center 0 no-repeat;
+    background-size: cover;
+}
+#wrap{
+	display: none;
+}
+
+/*common css*/
+#logo img,.swiper-slide img, #button img{
+	width: 100%;
+}
+/*common css*/
+
+/*START logo*/
+#logo{
+	width: 46.511627%;
+	margin: 0 50%;
+	padding-top: 2.752707%;
+}
+/*END log*/
+
+/*START swiper-container*/
+.swiper-container{
+	margin: 0 auto;
+	width: 86.27156789%;
+	min-height: 32rem;
+	padding: 3.4375% 0 1.53125% 0;
+}
+.swiper-container img{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+	background-image: url(../img/choice/s_tab_l.PNG);
+	left: 0;
+	top: 35%;
+}
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev{
+	background-image: url(../img/choice/s_tab_r.PNG);
+	right: 0;
+	top: 35%;
+}
+/*END swiper-container*/
+
+/*START button*/
+#button{
+	width: 35%;
+	margin: 0 auto;
+}
+/*END button*/
+
+/*START load*/
+#load{
+	position: absolute;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	background: #B4DFF4;
+}
+#load div {
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    margin-left: -120px;
+    width: 245px;
+    height: 75px;
+}
+#load span{
+	position: absolute;
+	display: block;
+	left: 43%;
+	font-size: 1.5em;
+	color: #52b9ef;
+}
+#load p{
+	background: url(../img/loading.jpg) 0 10em no-repeat;
+	width: 100%;
+	height: 100%;
+	-webkit-mask-image:url(../img/load_font.png);
+	-webkit-mask-repeat:no-repeat;
+	-webkit-mask-position:50% 50%;
+}
+/*END load*/
+
+@media screen and (max-width: 640px) {
+	.swiper-container{
+		min-height: 33rem;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.swiper-container{
+		min-height: 29rem;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.swiper-container{
+		width: 70%;
+		min-height: 22rem;
+	}
+}

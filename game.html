@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>play game</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/game.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+</head>
+
+<body>
+    <div id="load">
+        <div>
+            <p></p>
+            <span>0%</span>
+        </div>
+    </div>
+
+    <div id="wrap">
+        <!-- logo -->
+        <div id="index_logo">
+            <img src="img/main/index_logo.png">
+        </div>
+        <!-- gameArea -->
+        <div id="gameArea">
+            <img src="img/game/peo0_head.png" id="head">
+            <img src="img/game/peo0_body.png">
+            <img src="img/game/biao01.png" id="biao1">
+            <img src="img/game/biao02.png" id="biao2">
+            <img src="img/game/hand.png" id="hand" class="fadeIn">
+            <img src="" id="biao3">
+        </div>
+        <!-- time -->
+        <div id="time">
+            <img src="img/game/time_bg.png">
+            <img src="img/game/product.png" id="product">
+            <p>
+                <span id="minutes">20</span>
+                <em>"</em>
+                <span id="second">00</span>
+            </p>
+        </div>
+		
+		<!-- 音乐 -->
+		<div id="music">
+        	<audio src="music/bg_music.mp3" autoplay loop></audio>
+		</div>
+
+		<!-- 结束页面 -->
+		<div id="gameOver">
+			<div id="gameBubble">
+				<img src="img/game/result.png">
+                <span></span>
+			</div>
+			<div id="gameScore">
+				<img src="img/game/1.png"><img src="img/game/1.png"><img src="img/game/1.png">
+			</div>
+			<div id="gameTxt">
+				<img src="img/game/rt_11.png">
+				<img src="img/game/rt_12.png">
+			</div>
+			<div id="gameDoll">
+				<img src="img/game/r_1.png">
+			</div>
+			<div id="gameBtn">
+				<a href="###"><img src="img/game/choujiang.png"></a>
+			</div>
+		</div>
+
+		<!-- 抽奖页面 -->
+		<div id="award">
+			<div id="awardTop">
+				<img src="img/game/text_01.png">
+			</div>
+
+            <div id="awardProduct">
+                <img src="img/game/pro_01.png" alt="">
+                <img src="img/game/pro_02.png" alt="">
+                <img src="img/game/pro_03.png" alt="">
+            </div>
+
+            <div id="awardBottom">
+                <div>
+                    <input type='text'>
+                    <img src="img/game/photo.png">
+                </div>
+                <div>
+                    <img src="img/game/tijiao.png">
+                </div>
+                <div>
+                    <img src="img/game/xize.png">
+                </div>
+                <div>
+                    <img src="img/game/yujing.png">
+                </div>
+            </div>
+		</div>
+
+        <!-- 发奖细则 -->
+        <div id="awardRule">
+            <img src="img/game/fajiangxize.png">
+            <p></p>
+        </div>
+
+    </div>
+</body>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/game.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+    // 判断sessionStorage.swiperIndex的值
+    var swiperIndex = 0;
+    if(sessionStorage.swiperIndex == 0)
+        swiperIndex = 13;
+    else if(sessionStorage.swiperIndex == 15)
+        swiperIndex = 0;
+    else
+        swiperIndex = sessionStorage.swiperIndex - 1;
+
+    var imgArr = ["game/peo"+swiperIndex+"_body.png","game/peo"+swiperIndex+"_head.png",'game/0.png','game/1.png','game/2.png','game/3.png','game/4.png','game/5.png','game/6.png','game/7.png','game/8.png','game/9.png','game/a_01.png','game/a_back.png','game/abc.png','game/biao01.png','game/biao02.png','game/bs_logo1.png','game/choujiang.png','game/fajiangxize.png','game/hand.png','game/music_01.png','game/music_02.png','game/photo.png','game/pro_01.png','game/pro_02.png','game/pro_03.png','game/product.png','game/r_1.png','game/r_2.png','game/r_3.png','game/result.png','game/rt_11.png','game/rt_12.png','game/rt_21.png','game/rt_22.png','game/rt_31.png','game/rt_32.png','game/text_01.png','game/tijiao.png','game/time_bg.png','game/tip.png','game/tip1_1.png','game/tip1_2.png','game/tip1_3.png','game/tip2_1.png','game/tip2_2.png','game/tip2_3.png','game/tip3_1.png','game/tip3_2.png','game/tip3_3.png','game/xize.png','game/yujing.png',"game/product.gif"];
+
+    changePersonFn(swiperIndex);
+
+    loadFirstFn(function(){
+        $load.delay(1000).hide(1,function(){
+            $('#wrap').fadeIn();
+        });
+    });
+</script>
+</html>

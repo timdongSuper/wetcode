@@ -1,0 +1,467 @@
+@font-face {
+  font-family: 'myfont';
+  src: url('../font/myfont.ttf');
+  src:
+    url('../font/myfont.eot?#font-spider') format('embedded-opentype'),
+    url('../font/myfont.woff') format('woff'),
+    url('../font/myfont.ttf') format('truetype'),
+    url('../font/myfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,body,#wrap {
+    width: 100%;
+    height: 100%;
+    font-family: "myfont";
+}
+input{
+    font-family: "myfont";
+}
+/*copy*/
+body:before {
+    content: ' ';
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(../img/main/bg.jpg) center 0 no-repeat;
+    background-size: cover;
+}
+
+#wrap {
+    display: none;
+}
+
+
+/*common css*/
+
+#index_logo img,
+#gameBubble img,
+#gameTxt img,
+#gameDoll img,
+#gameBtn img,
+#awardTop img ,
+#awardRule img{
+    width: 100%;
+}
+
+
+/*common css*/
+
+
+/*START logo*/
+
+#index_logo {
+    width: 46.511627%;
+    margin: 0 auto;
+    padding-top: 2.752707%;
+}
+
+
+/*END logo*/
+
+
+/*START gameArea*/
+
+#gameArea {
+    position: relative;
+    margin: 0 auto;
+    width: 64%;
+    padding-top: 56%;
+    margin-top: 5%;
+}
+
+
+/*head*/
+
+#gameArea img:nth-of-type(1) {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+
+/*body*/
+
+#gameArea img:nth-of-type(2) {
+    display: block;
+    width: 100%;
+    bottom: 0;
+    z-index: 1;
+}
+
+
+/*biao01*/
+
+#gameArea img:nth-of-type(3) {
+    position: absolute;
+    z-index: 3;
+    width: 20%;
+    top: 11%;
+    right: 0;
+}
+
+
+/*biao2*/
+
+#gameArea img:nth-of-type(4) {
+    position: absolute;
+    z-index: 3;
+    width: 25%;
+    left: 4%;
+    top: 14%;
+}
+
+
+/*hand*/
+
+#gameArea img:nth-of-type(5) {
+    position: absolute;
+    z-index: 5;
+    width: 15%;
+    right: 18%;
+    top: 52%;
+}
+
+
+/*biao3*/
+
+#gameArea img:last-of-type(6) {
+    position: absolute;
+    z-index: 5;
+}
+
+#gameArea #hand {
+    animation: fadeIn 1s 0s infinite;
+    -webkit-animation: fadeIn 1s 0s infinite;
+}
+
+
+/*END gameArea*/
+
+
+/*START time*/
+
+#time {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+
+/*timg_bg*/
+
+#time img:nth-of-type(1) {
+    width: 25%;
+}
+
+
+/*product*/
+
+#time img:nth-of-type(2) {
+    position: absolute;
+    width: 35%;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto 0;
+}
+
+#time p {
+    font-size: 2.5em;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+
+/*START music*/
+
+#music {
+    position: fixed;
+    right: 10%;
+    bottom: 5%;
+    width: 7%;
+    height: 3%;
+    background: url(../img/game/music_01.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+}
+
+
+/*END music*/
+
+#gameOver {
+    display: none;
+    width: 100%;
+    height: 80%;
+    padding-top: 5%;
+    text-align: center;
+}
+
+#gameOver #gameBubble {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}
+#gameOver #gameBubble span{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 30%;
+    margin: 0 auto;
+    color: #1084c8;
+    font-size: 2em;
+}
+
+#gameOver #gameScore {
+    width: 100%;
+    padding: 2% 0;
+}
+
+#gameOver #gameScore img {
+    margin: 0 -3%;
+}
+
+#gameOver #gameTxt {
+    width: 75%;
+    margin: 0 auto;
+}
+
+#gameOver #gameDoll {
+    width: 62%;
+    margin: 0 auto;
+    padding: 4% 0;
+}
+
+#gameOver #gameBtn {
+    width: 40%;
+    margin: 0 auto;
+}
+
+
+/*END time*/
+
+.headAntL,
+.headAntR {
+    -webkit-transform-origin: center bottom;
+}
+
+.headAntL {
+    animation: headAntL 0.1s 0s backwards;
+    -webkit-animation: headAntL 0.1s 0s backwards;
+}
+
+
+/*START award*/
+
+#award {
+    display: none;
+    width: 100%;
+}
+
+#award #awardTop {
+    width: 80%;
+    margin: 0 auto;
+    margin-left: 18%;
+    padding-top: 7%;
+}
+
+#awardProduct {
+    text-align: center;
+}
+
+#awardProduct img {
+    width: 30%;
+}
+
+#awardBottom {
+    text-align: center;
+}
+
+#awardBottom input {
+    position: absolute;
+    width: 50%;
+    height: 60%;
+    right: 9%;
+    top: 13%;
+    font-size: 2em;
+    border: none;
+    color: #1888ca;
+}
+/*电话号码*/
+#awardBottom div:nth-of-type(1) {
+    position: relative;
+    margin: 0 auto;
+    width: 71%;
+    margin-top: 6%;
+    margin-bottom: 5%;
+}
+/*提交按钮*/
+#awardBottom div:nth-of-type(2) {
+    margin: 0 auto;
+    width: 32%;
+}
+/*发奖细则*/
+#awardBottom div:nth-of-type(3) {
+    margin: 0 auto;
+    width: 23%;
+    margin-top: 3%;
+    margin-bottom: 4%;
+}
+/*‘高能预警’提示信息*/
+#awardBottom div:nth-of-type(4) {
+    margin: 0 auto;
+    width: 78%;
+}
+
+#awardBottom div:nth-of-type(1) img,
+#awardBottom div:nth-of-type(2) img,
+#awardBottom div:nth-of-type(3) img,
+#awardBottom div:nth-of-type(4) img {
+    width: 100%;
+}
+
+
+/*END award*/
+
+
+/*START awardRule*/
+
+#awardRule {
+    display: none;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 10%;
+}
+#awardRule p{
+    position: absolute;
+    right: 17%;
+    top: 10%;
+    width: 10%;
+    height: 5%;
+}
+
+/*END awardRule*/
+
+/*START load*/
+
+#load {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: #B4DFF4;
+}
+
+#load div {
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    margin-left: -120px;
+    width: 245px;
+    height: 75px;
+}
+
+#load span {
+    position: absolute;
+    display: block;
+    left: 43%;
+    top: 100%;
+    font-size: 1.5em;
+    color: #52b9ef;
+}
+
+#load p {
+    background: url(../img/loading.jpg) 0 0 no-repeat;
+    width: 100%;
+    height: 100%;
+    -webkit-mask-image: url(../img/load_font.png);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: 50% 50%;
+}
+
+
+/*END load*/
+
+/*START head animation*/
+
+@keyframes headAntL {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(-3deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+@-webkit-keyframes headAntL {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(-3deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+.headAntR {
+    animation: headAntR 0.1s 0s backwards;
+    -webkit-animation: headAntR 0.1s 0s backwards;
+}
+
+@keyframes headAntR {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(3deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+@-webkit-keyframes headAntR {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(3deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #gameOver{
+        width: 80%;
+        margin: 0 auto;
+    }
+    #award{
+        width: 90%;
+        margin: 0 auto;
+    }
+    #awardRule{
+        width: 75%;
+    }
+    #time p{
+        font-size: 2em;
+        top: 7%;
+    }
+    #gameOver #gameBubble span{
+        font-size: 1.5em;
+    }
+}
