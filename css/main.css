@@ -1,0 +1,255 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background: url('../img/main/bg.jpg') no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#wrap {
+    width: 100%;
+    height: 100%;
+    min-width: 320px;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+
+/*common css*/
+
+#main #index_logo img,
+#button #startBtn img,
+#button #rulesLink img {
+    width: 100%;
+}
+
+#people #people_01,
+#people #people_02,
+#people #people_03,
+#people #people_04,
+#people #people_05 {
+    position: absolute;
+}
+
+
+/*common css*/
+
+#main {
+    width: 100%;
+    display: none;
+}
+
+
+/*START logo*/
+
+#index_logo {
+    width: 46.511627%;
+    margin: 0 auto;
+    padding-top: 2.752707%;
+}
+
+
+/*END logo*/
+
+
+/*START bubbleTip*/
+
+#bubbleTip {
+    position: relative;
+    width: 100%;
+}
+
+#bubbleTip #bubble {
+    width: 100%;
+    -webkit-animation: fadeIn 1s 2.8s both;
+    animation: fadeIn 1s 2.8s both;
+}
+
+#bubbleTip #dialogue {
+    position: absolute;
+    left: 29%;
+    top: 23%;
+    width: 50%;
+    -webkit-animation: bounceIn 1s 3s both;
+    animation: bounceIn 1s 3s both;
+}
+
+#bubbleTip #doll {
+    position: absolute;
+    left: 5%;
+    top: 18%;
+    width: 27%;
+    -webkit-animation: rotateIn 1s 2.7s both;
+    animation: rotateIn 1s 2.7s both;
+}
+
+
+/*END bubbleTip*/
+
+
+/*START people*/
+
+#people {
+    position: relative;
+    width: 100%;
+    padding-top: 55%;
+}
+
+#people #people_01 {
+    z-index: 3;
+    left: 3%;
+    bottom: 0%;
+    width: 33%;
+    -webkit-animation: fadeInDownBig 1s 1.7s both;
+    animation: fadeInDownBig 1s 1.7s both;
+}
+
+#people #people_02 {
+    z-index: 4;
+    left: 21%;
+    bottom: 0%;
+    width: 30%;
+    -webkit-animation: people_first 1s 1s both;
+    animation: people_first 1s 1s both;
+}
+
+#people #people_03 {
+    z-index: 5;
+    left: 0%;
+    right: 0%;
+    margin: 0 auto;
+    bottom: 0%;
+    width: 26%;
+    -webkit-animation: people_first 1s 0s both;
+    animation: people_first 1s 0s both;
+}
+
+#people #people_04 {
+    z-index: 4;
+    right: 21%;
+    bottom: 0%;
+    width: 20%;
+    -webkit-animation: people_first 1s 1s both;
+    animation: people_first 1s 1s both;
+}
+
+#people #people_05 {
+    z-index: 3;
+    right: 0%;
+    bottom: 0%;
+    width: 26%;
+    -webkit-animation: fadeInDownBig 1s 1.7s both;
+    animation: fadeInDownBig 1s 1.7s both;
+}
+
+
+/*END people*/
+
+
+/*START button*/
+
+#button {
+    width: 100%;
+    text-align: center;
+    margin-top: 1.7485822%;
+}
+
+#button #startBtn {
+    display: inline-block;
+    width: 30%;
+    padding: 1.7485822% 0 2.079395%;
+}
+
+#button #rulesLink {
+    display: inline-block;
+    width: 20%;
+    padding-bottom: 6%;
+}
+
+
+/*END button*/
+
+
+/*START load*/
+
+#load {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: #B4DFF4;
+}
+
+#load div {
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    margin-left: -120px;
+    width: 245px;
+    height: 75px;
+}
+
+#load span {
+    position: absolute;
+    display: block;
+    left: 43%;
+    top: 100%;
+    font-size: 1.5em;
+    color: #52b9ef;
+}
+
+#load p {
+    background: url(../img/loading.jpg) 0 0 no-repeat;
+    width: 100%;
+    height: 100%;
+    -webkit-mask-image: url(../img/load_font.png);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: 50% 50%;
+}
+
+
+/*END load*/
+
+
+/*START rule*/
+
+#rule {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 90%;
+    margin: auto;
+    top: 3%;
+}
+
+#rule img {
+    width: 100%;
+}
+
+#rule p {
+    position: absolute;
+    width: 12%;
+    height: 7%;
+    right: 7%;
+    top: 11%;
+}
+
+
+/*END rule*/
+
+
+@media screen and (max-width: 360px) {
+    #people{
+        width: 85%;
+        margin: 0 auto;
+    }
+    #bubbleTip{
+        width: 80%;
+        margin: 0 auto;
+    }
+    #rule{
+        width: 80%;
+    }
+}
