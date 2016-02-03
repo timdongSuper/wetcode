@@ -1,5 +1,8 @@
-# wetcode-development-version
-development-version
+# wetcode
+
+version:development-version
+
+description:wetcode-project
 
 project development date 2015-12-17
 
